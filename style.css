@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --cardsbg-color-primary: hsl(33, 100%, 98%);
+    --cardsbg-color-secundary:hsl(10, 79%, 65%);
+    --bg-color-primary: hsl(27, 66%, 92%);
+    --bg-color-secundary: hsl(25, 47%, 15%);
+
+    --bars-color-primary: hsl(10, 79%, 65%);
+    --bars-color-active: hsl(186, 34%, 60%);
+
+    --text-color-primary:hsl(28, 10%, 53%);
+    --text-color-secundary: hsl(25, 47%, 15%);
+    --text-color-extra:hsl(33, 100%, 98%);
+
+}
+
+
+body{
+    background-color: var(--bg-color-primary);
+    padding:3em 1em;
+    color: var(--text-color-primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    font-family: 'DM Sans', sans-serif;
+}
+
+h1{
+    color: var(--text-color-secundary);
+    font-size: 2rem;
+    text-align: left;
+}
+
+
+
+header{
+    background-color: var(--cardsbg-color-secundary);
+    border-radius: 10px;
+    width: 100%;
+    max-width: 540px;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    color: var(--text-color-extra);
+}
+
+
+#balance{
+    color: var(--text-color-extra);
+}
+.card{
+    background-color: var(--cardsbg-color-primary);
+    border-radius: 10px;
+    width: 100%;
+    min-height: 420px;
+    max-width: 540px;
+    padding: 2em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card h1:first-of-type{
+    font-size: 2rem;
+}
+
+.sheet-container{
+    
+    min-height: 177px;
+    max-height: 577px;
+    padding-bottom: 2em;
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 1fr auto; 
+    gap:5px;
+    grid-template-areas: 
+    "monbar-container tuebar-container wedbar-container thubar-container fribar-container satbar-container sunBar-container"
+    "mon tue wed thu fri sat sun";
+    align-items: flex-end;
+    border-bottom: 2px solid var(--bg-color-primary);
+    font-size: .8rem;
+
+}
+.hidden{
+    visibility: hidden;
+}
+
+.amount-tag{
+    background-color: var(--bg-color-secundary);
+    color: var(--text-color-extra);
+    border-radius: 5px;
+    margin-bottom:5px ;
+    padding: .5em 0;
+    font-size: .8em;
+    font-weight: 700;
+}
+
+.bar{
+    
+    border-radius: 5px;
+    background-color: var(--bars-color-primary);
+}
+
+.bar:hover{
+    cursor: pointer;
+    opacity: .7;
+}
+
+
+.more-info-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    
+}
+
+.my-balance{
+    text-align: left;
+}
+
+.last-month-container{
+    text-align: right;
+}
+
+.last-month-container p:first-of-type{
+    font-weight: 700;
+    color: var(--text-color-secundary);
+}
+
+.taller-bar{
+    background-color: var(--bars-color-active);
+}
+
