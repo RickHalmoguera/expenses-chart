@@ -39,7 +39,7 @@ h1{
 
 
 
-header{
+.top-container{
     background-color: var(--cardsbg-color-secundary);
     border-radius: 10px;
     width: 100%;
