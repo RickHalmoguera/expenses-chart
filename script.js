@@ -20,7 +20,7 @@ const displayBars= (data)=>{
 
     data.forEach(element=> {
         sheetDisplay.innerHTML+= 
-        `<div class"${element.day}bar-container">
+        `<div class="${element.day}bar-container">
             <div class=" amount-tag hover hidden ${element.day}-tag" id="${element.day}Tag"> $${element.amount}</div>
             <div class=" ${element.day}bar bar ${element.amount == valueArray[0] ? "taller-bar" :""}" id="${element.day}Bar"></div>
         </div>
